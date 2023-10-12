@@ -19,10 +19,10 @@ export async function POST() {
         const prisma = new PrismaClient();
         let category = await prisma.category.create({
             data: {
-                title: "ding ding ding",
-                metaTitle: "blah blah blah",
-                slug: "blah blah blah",
-                content: "blah blah blah"
+                title: "LLL lll LLL",
+                metaTitle: "LLL lll LLL",
+                slug: "LLL lll LLL",
+                content: "LLL lll LLL"
             }
         })
         return NextResponse.json({ status: "Success", data: category })
@@ -38,7 +38,7 @@ export async function PATCH() {
     try {
         let prisma = new PrismaClient();
         let category = await prisma.category.update({
-            where: { id: 2 },
+            where: { id: 6 },
             data: { slug: "dong dong dong", }
         });
         return NextResponse.json({ status: "Success", data: category })
@@ -55,7 +55,7 @@ export async function DELETE() {
     try {
         let prisma = new PrismaClient();
         let category = await prisma.category.delete({
-            where: { id: 1 }
+            where: { id: 6 }
         });
 
         return NextResponse.json({ status: "Success", data: category })

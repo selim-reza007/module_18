@@ -20,7 +20,7 @@ export async function POST() {
             data: {
                 key: "DDD",
                 content: "ggg gghh jjj",
-                Post: { connect: { id: 2 } },
+                postId: 3
             }
         })
         return NextResponse.json({ status: "success", data: result })
@@ -36,7 +36,7 @@ export async function PATCH() {
         let prisma = new PrismaClient();
         let result = await prisma.post_Meta.update({
             where: { id: 2 },
-            data: { Post: { connect: { id: 1 } } }
+            data: { content: "blah blah..." }
         });
         return NextResponse.json({ status: "Success", data: result })
     }

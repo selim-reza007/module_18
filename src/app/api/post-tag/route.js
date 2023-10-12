@@ -18,8 +18,8 @@ export async function POST() {
     try {
         let result = await prisma.post_Tag.create({
             data: {
-                Post: { connect: { id: 2 } },
-                Tag: { connect: { id: 2 } }
+                postId: 1,
+                tagId: 1
             }
         })
         return NextResponse.json({ status: "success", data: result })
@@ -35,7 +35,7 @@ export async function PATCH() {
         let prisma = new PrismaClient();
         let result = await prisma.post_Tag.update({
             where: { id: 2 },
-            data: { Post: { connect: { id: 1 } } }
+            data: { Post: { connect: { id: 5 } } }
         });
         return NextResponse.json({ status: "Success", data: result })
     }

@@ -24,7 +24,7 @@ export async function POST() {
                 slug: "blah blah",
                 summary: "blah blah",
                 content: "blah blah",
-                user: { connect: { id: 2 } }
+                athurId: 2
             }
         })
 

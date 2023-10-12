@@ -19,10 +19,10 @@ export async function POST() {
         const prisma = new PrismaClient();
         let tag = await prisma.tag.create({
             data: {
-                title: "blah blah blah",
-                metaTitle: "blah blah blah",
-                slug: "blah blah blah",
-                content: "blah blah blah"
+                title: "MMM mmm MMM",
+                metaTitle: "MMM mmm MMM",
+                slug: "MMM mmm MMM",
+                content: "MMM mmm MMM"
             }
         })
         return NextResponse.json({ status: "Success", data: tag })
@@ -54,11 +54,11 @@ export async function DELETE() {
 
     try {
         let prisma = new PrismaClient();
-        let tag = await prisma.tag.delete({
-            where: { id: 1 }
+        let result = await prisma.tag.delete({
+            where: { id: 2 }
         });
 
-        return NextResponse.json({ status: "Success", data: tag })
+        return NextResponse.json({ status: "Success", data: result })
     }
     catch (e) {
         return NextResponse.json({ Status: "Fail", data: e })

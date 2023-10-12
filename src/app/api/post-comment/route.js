@@ -21,7 +21,7 @@ export async function POST() {
                 title: "blah blah",
                 published: 1,
                 content: "khuhkj kkjk",
-                Post: { connect: { id: 2 } }
+                postId: 3
             }
         })
         return NextResponse.json({ status: "success", data: result })
